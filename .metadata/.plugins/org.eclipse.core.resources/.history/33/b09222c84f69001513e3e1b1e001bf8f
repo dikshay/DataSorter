@@ -1,0 +1,52 @@
+package com.dikshay.clasificacion.sorting;
+
+import java.util.Vector;
+
+public class SortingAlgorithms {
+	Vector gElementsToBeSorted = new Vector();
+
+	public void InsertionSort()
+	{
+		int key,i;
+		for(int j = 1;j<gElementsToBeSorted.capacity();j++)
+			{
+				key = gElementsToBeSorted[j];
+				i = j-1;
+
+				while(i >= 0 && userFitnessData[i] > key)
+					{	
+						userFitnessData[i+1] = userFitnessData[i];
+						i = i-1;
+
+					}
+
+					numberOfComparison++;
+					
+				userFitnessData[i+1] = key;
+			}
+	}
+	public void MergeSort()
+	{
+		
+	}
+	public void QuickSort()
+	{
+		
+	}
+	public void HeapSort()
+	{
+		
+	}
+	public void CountingSort()
+	{
+		
+	}
+	public void RadixSort()
+	{
+		
+	}
+	public void BucketSort()
+	{
+		
+	}
+}

@@ -1,0 +1,39 @@
+package com.dikshay.clasificacion.Utilities;
+
+
+
+import java.util.HashMap;
+
+import javax.servlet.http.HttpServletRequest;
+
+
+
+
+public class Processor {
+	private static Processor applicationProcessor;
+	private HashMap<String,ICommand> gCommands = new HashMap<String,ICommand>();
+	public static Processor getInstance()
+	{
+		if(applicationProcessor == null)
+		{
+			applicationProcessor = new Processor();
+		}
+		return applicationProcessor;
+	}
+	public void setCommand()
+	{
+
+	}
+	public ICommand getCommand(HttpServletRequest pRequest)
+	{
+		String requestString = pRequest.getRequestURI();
+		int slashPosition = requestString.lastIndexOf("/");
+		requestString = requestString.substring(slashPosition + 1);
+		if(requestString.endsWith(".kar"))
+		{
+			requestString = requestString.substring(0, requestString.length()-4);
+		}
+		return gCommands.get(requestString);
+	}
+}
+

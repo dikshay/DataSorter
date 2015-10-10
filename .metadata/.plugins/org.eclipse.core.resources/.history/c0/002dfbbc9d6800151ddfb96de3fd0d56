@@ -1,0 +1,21 @@
+package com.dikshay.clasificacion.sorting;
+
+public class SortingAlgorithms {
+
+	public void InsertionSort()
+	{
+		
+	}
+	public void MergeSort()
+	{
+		
+	}
+	public void QuickSort()
+	{
+		
+	}
+	public void HeapSort()
+	{
+		
+	}
+}

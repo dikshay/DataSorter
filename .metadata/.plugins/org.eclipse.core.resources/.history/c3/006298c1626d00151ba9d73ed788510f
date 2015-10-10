@@ -1,0 +1,38 @@
+package com.dikshay.clasificacion.sorting;
+
+import java.util.Scanner;
+
+public class HelloWorld {
+public static void main()
+{
+	Scanner sc = new Scanner(System.in);
+	String inputArray[] = new String[10];
+	for(int i =0;i<=1;i++)
+	{
+		inputArray[i] = sc.nextLine();
+		double sum=0;
+		String stringNumber = inputArray[i];
+		int counter = 0;
+		while(sum!=1)
+		{
+			sum=0;
+			if(counter!=0)
+			{
+				stringNumber = String.valueOf(sum);
+			}
+			
+			char[] charArray = stringNumber.toCharArray();
+			for(int j=0;j<charArray.length;j++)
+			{
+				sum = sum + Math.pow(Character.getNumericValue(charArray[j]),2);
+			}
+			System.out.println("sum:"+sum);
+			counter++;
+		}
+		
+	}
+	double sum=0;
+
+	
+}
+}
