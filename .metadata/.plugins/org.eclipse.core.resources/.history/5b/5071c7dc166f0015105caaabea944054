@@ -1,0 +1,13 @@
+package fileupload;
+
+public class ReadFileData {
+	private static ReadFileData readFileData;j
+	public static ReadFileData getInstance()
+	{
+		if(readFileData == null)
+		{
+			readFileData = new ReadFileData();
+		}
+		return readFileData;
+	}
+}

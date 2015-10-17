@@ -1,0 +1,5 @@
+package com.dikshay.clasificacion.servlet;
+
+public class BaseServlet {
+
+}
