@@ -1,0 +1,23 @@
+package fileupload;
+
+import java.util.HashMap;
+
+import interfaces.CommandInterface;
+
+public class ReadFileData implements CommandInterface{
+	private static ReadFileData readFileData;
+	public static ReadFileData getInstance()
+	{
+		if(readFileData == null)
+		{
+			readFileData = new ReadFileData();
+		}
+		return readFileData;
+	}
+	@Override
+	public boolean execute(HashMap<String, String> pRequestParameters, HashMap<String, Object> pRequestStorage,
+			HashMap<String, Object> pResponseStorage) throws Exception {
+		// TODO Auto-generated method stub
+		return false;
+	}
+}

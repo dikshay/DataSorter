@@ -1,0 +1,20 @@
+Ext.onReady(function(){
+Ext.QuickTips.init();
+
+var fibasic = new Ext.ux.form.FileUploadField({
+	renderTo: 'fi-basic',
+	width: 400
+});
+
+new Ext.button({
+	text: 'Get File Path',
+	renderTo: 'fi-basic'btn',
+	handler: function(){
+		var v = fibasic.getValue();
+	}
+	
+})	
+	
+	
+	
+});
