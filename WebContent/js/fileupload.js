@@ -38,6 +38,7 @@ var lUploadForm = new Ext.FormPanel({
 								{
 									console.log("suceess");
 									console.log(o.result.ResponseStorage.SortedVaues);
+									drawGraph(o);
 								}
 							});
 						}
@@ -65,3 +66,16 @@ var lUploadForm = new Ext.FormPanel({
 	
 	
 });
+function drawGraph(o)
+{
+	var SortedData = o.result.ResponseStorage.SortedVaues;
+			document.getElementById("visibleSorting").innerHTML = document.getElementById("InsertionSortSection").innerHTML;
+			lineChartData.datasets[0].data = SortedData;
+					var ctx = document.getElementById("canvas").getContext("2d");
+		window.myLine = new Chart(ctx).Line(lineChartData, {
+			responsive: true
+		});
+}
+function addUploadForm()
+{
+	}

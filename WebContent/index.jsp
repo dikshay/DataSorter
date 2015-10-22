@@ -70,8 +70,13 @@
 		var isInsertionSortActive = true;
 		function showInsertionSort()
 		{
-			document.getElementById("visibleSorting").innerHTML = document.getElementById("InsertionSortSection").innerHTML;
-			init();
+		/*	
+		document.getElementById("visibleSorting").innerHTML = document.getElementById("InsertionSortSection").innerHTML;
+					var ctx = document.getElementById("canvas").getContext("2d");
+		window.myLine = new Chart(ctx).Line(lineChartData, {
+			responsive: true
+		});
+		*/
 		}
 		/*function getValueFromServlet()
 		{
@@ -123,6 +128,11 @@ $(document).ready(function() {
 					</div>
 					<div id="fileupload">
 					</div>
+					<div id="addAnother" class="hidden">
+					If you want to add more datasets, click on the above, 'Select & Upload' button.</ br>
+					If you are done adding datasets and want to compare the loaded datasets, press the below button.
+					<button type="button" onclick="addUploadForm()">See Result Graphs</button>
+					<div>
 					<div id="InsertionSortSection"
 						 class="hidden">
 							<h3>Insertion Sort</h3>
@@ -148,7 +158,11 @@ $(document).ready(function() {
 							<h3>Heap Sort</h3>
 						</div>
 					
-					<canvas id="plotChart" width="400" height="400"></canvas>
+							<div style="width:30%">
+			<div>
+				<canvas id="canvas" height="450" width="600"></canvas>
+			</div>
+		</div>
 
 
 				
